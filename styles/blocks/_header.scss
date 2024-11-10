@@ -1,9 +1,24 @@
 @use '../helpers' as *;
 
 .header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: rem(100) rem(200);
+
+  @keyframes scrolling-header {
+    to {
+      box-shadow: 0 0 1rem 0 var(--color-dark-40);
+    }
+  }
+
   &__promo {
     padding-block: rem(20);
     text-align: center;
+    background-color: var(--color-dark);
     border-bottom: var(--border);
 
     @include mobile {
