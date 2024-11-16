@@ -1,0 +1,63 @@
+@use '../helpers' as *;
+
+.advantage-card {
+  display: grid;
+  row-gap: rem(30);
+
+  @include laptop {
+    row-gap: rem(20);
+  }
+
+  @include mobile {
+    row-gap: rem(14);
+  }
+
+  &__image {
+    @include laptop {
+      width: rem(40);
+    }
+
+    @include mobile {
+      width: rem(30);
+    }
+  }
+
+  &__link {
+    --circleSize: #{rem(52)};
+    --circleMarginLeft: #{rem(20)};
+
+    position: relative;
+    display: grid;
+    row-gap: rem(4);
+    padding-right: calc(var(--circleSize) + var(--circleMarginLeft));
+
+    @include laptop {
+      --circleSize: #{rem(44)};
+      --circleMarginLeft: #{rem(14)};
+
+      row-gap: rem(2);
+    }
+
+    @include mobile {
+      --circleSize: #{rem(40)};
+    }
+
+    &::after {
+      @include square(var(--circleSize));
+      @include abs-y;
+
+      content: '';
+      right: 0;
+      background:
+        url('../../icons/arrow-top-right_black.svg') center no-repeat
+        var(--color-accent);
+      border-radius: 50%;
+    }
+  }
+
+  &__details {
+    @include fluid-text(20, 14);
+
+    font-family: var(--font-family-accent);
+  }
+}

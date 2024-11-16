@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.metrics {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: rem(10);
+    padding: rem(50);
+
+    @include laptop {
+      row-gap: rem(2);
+      padding: rem(30) rem(40);
+    }
+
+    @include tablet {
+      row-gap: 0;
+      padding: rem(20);
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:not(:last-child) {
+      border-right: var(--border);
+    }
+  }
+
+  &__value {
+    font-weight: 600;
+  }
+
+  &__sign {
+    color: var(--color-accent);
+  }
+}

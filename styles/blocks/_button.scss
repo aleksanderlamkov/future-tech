@@ -30,4 +30,8 @@
     border-color: var(--color-accent);
     border-radius: rem(8);
   }
+
+  &--dark-gray {
+    background-color: var(--color-dark-10);
+  }
 }

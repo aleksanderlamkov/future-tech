@@ -1,0 +1,139 @@
+@use '../helpers' as *;
+
+.hero {
+  &__main {
+    @include tablet-above {
+      display: grid;
+      grid-template-columns: 60% auto;
+      grid-template-areas:
+        'body resources-preview'
+        'metrics resources-preview';
+    }
+  }
+
+  &__body {
+    grid-area: body;
+    padding-top: rem(150);
+    padding-right: rem(50);
+    padding-bottom: rem(100);
+
+    @include laptop {
+      padding-top: rem(100);
+      padding-right: rem(40);
+    }
+
+    @include tablet {
+      padding-right: 0;
+      padding-top: rem(40);
+      padding-bottom: rem(30);
+    }
+  }
+
+  &__subtitle {
+    @include fluid-text(30, 18);
+
+    font-family: var(--font-family-accent);
+    font-weight: 500;
+    color: var(--color-dark-40);
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+
+      @include mobile {
+        margin-bottom: rem(14);
+      }
+    }
+  }
+
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+
+      @include mobile {
+        margin-bottom: rem(10);
+      }
+    }
+  }
+
+  &__metrics {
+    grid-area: metrics;
+
+    @include tablet-above {
+      border-top: var(--border);
+    }
+
+    @include tablet {
+      &::before {
+        width: 100vw;
+        right: calc(var(--container-padding-x) * -1);
+      }
+    }
+  }
+
+  &__resources-preview {
+    grid-area: resources-preview;
+    padding-left: rem(80);
+    padding-bottom: rem(80);
+    background:
+      url('../../images/resources-preview/bg.png') 0 0/cover no-repeat;
+
+    @include laptop {
+      padding-left: rem(50);
+      padding-bottom: rem(50);
+    }
+
+    @include tablet-above {
+      border-left: var(--border);
+    }
+
+    @include tablet {
+      width: 100vw;
+      margin-left: calc(var(--container-padding-x) * -1);
+      padding: rem(100) rem(40) rem(40);
+      background-image: url('../../images/resources-preview/bg_tablet.png');
+      background-size: contain;
+    }
+  }
+
+  &__advantages {
+    border-block: var(--border);
+
+    &-list {
+      @include tablet-above {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    &-item {
+      --paddingX: #{rem(80)};
+
+      padding-block: rem(50);
+
+      @include laptop {
+        --paddingX: #{rem(50)};
+
+        padding-block: rem(40);
+      }
+
+      @include tablet-above {
+        &:not(:first-child) {
+          padding-left: var(--paddingX);
+        }
+
+        &:not(:last-child) {
+          padding-right: var(--paddingX);
+          border-right: var(--border);
+        }
+      }
+
+      @include tablet {
+        padding-block: rem(30);
+
+        &:not(:last-child) {
+          border-bottom: var(--border);
+        }
+      }
+    }
+  }
+}

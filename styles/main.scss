@@ -12,7 +12,24 @@
 @use 'blocks/badge';
 @use 'blocks/soc1als';
 @use 'blocks/footer';
+@use 'blocks/metrics';
+@use 'blocks/team';
+@use 'blocks/resources-preview';
+@use 'blocks/advantage-card';
+@use 'blocks/hero';
+@use 'blocks/tag';
+@use 'blocks/section';
+@use 'blocks/list';
+@use 'blocks/tile';
+@use 'blocks/card';
+@use 'blocks/tabs';
+@use 'blocks/person-card';
+@use 'blocks/blog-actions';
+@use 'blocks/blog-card';
+@use 'blocks/download-info';
 
-.header {
+.header,
+main > *:not(:last-child),
+.footer {
   display: none !important;
 }
