@@ -27,6 +27,11 @@
 @use 'blocks/blog-actions';
 @use 'blocks/blog-card';
 @use 'blocks/download-info';
+@use 'blocks/bordered-grid';
+@use 'blocks/rating-view';
+@use 'blocks/review-card';
+@use 'blocks/about-card';
+@use 'blocks/about';
 
 .header,
 main > *:not(:last-child),

@@ -1,0 +1,31 @@
+@use '../helpers' as *;
+
+.rating-view {
+  display: inline-flex;
+  column-gap: rem(7);
+  padding: rem(10) rem(16);
+  background-color: var(--color-dark);
+  border: var(--border);
+  border-radius: rem(100);
+
+  @include laptop {
+    column-gap: rem(4);
+    padding: rem(8) rem(12);
+  }
+
+  &__star {
+    --size: #{rem(24)};
+
+    @include square(var(--size));
+
+    background: url('../../icons/star_gray.svg') center/contain no-repeat;
+
+    &.is-active {
+      background-image: url('../../icons/star_yellow.svg');
+    }
+
+    @include laptop {
+      --size: #{rem(20)};
+    }
+  }
+}
