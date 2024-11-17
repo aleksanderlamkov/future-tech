@@ -32,4 +32,10 @@
       background-image: url('../../icons/eye_yellow.svg');
     }
   }
+
+  &--gray-arrow-down {
+    &::after {
+      background-image: url('../../icons/arrow-down_gray.svg');
+    }
+  }
 }

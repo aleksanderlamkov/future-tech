@@ -1,0 +1,73 @@
+@use '../helpers' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: rem(16);
+  font-weight: 500;
+  font-size: rem(18);
+  color: var(--color-light);
+
+  @include laptop {
+    row-gap: rem(12);
+    font-size: rem(16);
+  }
+
+  &__body {
+    display: flex;
+    column-gap: rem(16);
+    width: 100%;
+
+    @include laptop {
+      column-gap: rem(12);
+    }
+  }
+
+  &__required-star {
+    color: var(--color-red);
+  }
+
+  &__control {
+    width: 100%;
+    height: rem(67);
+    padding-inline: rem(20);
+    color: var(--color-light);
+    background-color: var(--color-dark-10);
+    border: var(--border);
+    border-radius: rem(8);
+
+    @include laptop {
+      height: rem(53);
+      padding-inline: rem(16);
+      border-radius: rem(6);
+    }
+
+    @include hover {
+      border-color: var(--color-accent);
+      box-shadow: var(--shadow);
+    }
+
+    &::placeholder {
+      color: var(--color-dark-40);
+    }
+
+    &:user-invalid {
+      border-color: var(--color-red);
+    }
+  }
+
+  textarea.field__control {
+    resize: vertical;
+    min-height: rem(163);
+    padding-block: rem(20);
+
+    @include laptop {
+      padding-block: rem(16);
+    }
+
+    @include mobile {
+      min-height: rem(127);
+    }
+  }
+}

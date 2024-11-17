@@ -6,7 +6,7 @@
     background-color: var(--color-dark-10);
 
     &-inner {
-      &:has(.section__link) {
+      &:has(.section__actions) {
         display: grid;
         align-items: center;
         column-gap: 1rem;
@@ -38,5 +38,14 @@
 
   &__body {
     border-block: var(--border);
+  }
+
+  &__actions,
+  &__link {
+    width: 100%;
+  }
+
+  &__link {
+    max-width: rem(360);
   }
 }

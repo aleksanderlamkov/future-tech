@@ -1,0 +1,40 @@
+@use '../helpers' as *;
+
+.report-card {
+  display: flex;
+  flex-direction: column;
+  row-gap: fluid(30, 20);
+  height: 100%;
+
+  &__image {
+    width: 100%;
+    height: rem(290);
+    object-fit: cover;
+    border-radius: rem(12);
+
+    @include mobile {
+      height: rem(223);
+    }
+  }
+
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(14);
+
+    @include laptop {
+      row-gap: rem(10);
+    }
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(20);
+
+    @include laptop {
+      column-gap: rem(10);
+    }
+  }
+}

@@ -4,6 +4,7 @@
 @use 'utils';
 @use 'globals';
 
+@use 'blocks/expandable-content';
 @use 'blocks/icon';
 @use 'blocks/logo';
 @use 'blocks/button';
@@ -32,9 +33,20 @@
 @use 'blocks/review-card';
 @use 'blocks/about-card';
 @use 'blocks/about';
-
-.header,
-main > *:not(:last-child),
-.footer {
-  display: none !important;
-}
+@use 'blocks/hero-alt';
+@use 'blocks/summary';
+@use 'blocks/news-card';
+@use 'blocks/news';
+@use 'blocks/video-player';
+@use 'blocks/video-card';
+@use 'blocks/table-of-contents';
+@use 'blocks/blog-details';
+@use 'blocks/report-card';
+@use 'blocks/contacts-card';
+@use 'blocks/field';
+@use 'blocks/select';
+@use 'blocks/checkbox';
+@use 'blocks/feedback-form';
+@use 'blocks/accrodion';
+@use 'blocks/accordion-group';
+@use 'blocks/contacts';

@@ -1,14 +1,48 @@
 @use '../helpers' as *;
 
 .metrics {
+  --columns: 3;
+
+  &--4-cols {
+    --columns: 4;
+
+    text-align: center;
+
+    @include tablet-above {
+      .metrics__item:nth-child(4n) {
+        padding-right: 0;
+      }
+    }
+
+    @include tablet {
+      --columns: 2;
+
+      padding-inline: 0;
+
+      .metrics__item {
+        border-bottom: var(--border);
+
+        &:nth-child(odd) {
+          padding-left: var(--container-padding-x);
+        }
+
+        &:nth-child(even) {
+          padding-right: var(--container-padding-x);
+          border-right: none;
+        }
+      }
+    }
+  }
+
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(var(--columns), 1fr);
   }
 
   &__item {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: start;
     row-gap: rem(10);
     padding: rem(50);
 

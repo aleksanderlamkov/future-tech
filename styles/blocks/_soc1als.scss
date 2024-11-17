@@ -1,6 +1,41 @@
 @use '../helpers' as *;
 
 .soc1als {
+  &--3-cols {
+    width: 100%;
+    max-width: rem(308);
+
+    .soc1als {
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: rem(10);
+
+        @include laptop {
+          column-gap: rem(10);
+        }
+      }
+
+      &__link {
+        @include flex-center;
+
+        width: 100%;
+        height: rem(60);
+        background-color: var(--color-dark-10);
+        border: var(--border);
+        border-radius: rem(6);
+
+        @include laptop {
+          height: rem(48);
+        }
+
+        @include hover {
+          border-color: var(--color-accent);
+        }
+      }
+    }
+  }
+
   &__list {
     display: flex;
     column-gap: rem(20);
