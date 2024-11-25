@@ -2302,6 +2302,12 @@ button[aria-label]::before {
 .blog-details__actions {
   padding-block: clamp(1.25rem, 0.7720588235rem + 1.9607843137vw, 3.125rem);
 }
+.blog-details__body h2:not(:first-child), .blog-details__body h3:not(:first-child), .blog-details__body h4:not(:first-child), .blog-details__body h5:not(:first-child), .blog-details__body h6:not(:first-child) {
+  margin-top: 1.5em;
+}
+.blog-details__body h2:not(:last-child), .blog-details__body h3:not(:last-child), .blog-details__body h4:not(:last-child), .blog-details__body h5:not(:last-child), .blog-details__body h6:not(:last-child) {
+  margin-bottom: 1em;
+}
 .blog-details__main {
   --initialMaxHeight: 46.3125rem;
 }
@@ -2314,12 +2320,6 @@ button[aria-label]::before {
   .blog-details__main {
     --initialMaxHeight: 41.8125rem;
   }
-}
-.blog-details__main h2:not(:first-child), .blog-details__main h3:not(:first-child), .blog-details__main h4:not(:first-child), .blog-details__main h5:not(:first-child), .blog-details__main h6:not(:first-child) {
-  margin-top: 1.5em;
-}
-.blog-details__main h2:not(:last-child), .blog-details__main h3:not(:last-child), .blog-details__main h4:not(:last-child), .blog-details__main h5:not(:last-child), .blog-details__main h6:not(:last-child) {
-  margin-bottom: 1em;
 }
 
 .report-card {

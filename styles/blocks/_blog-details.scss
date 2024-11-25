@@ -78,6 +78,18 @@
     padding-block: fluid(50, 20);
   }
 
+  &__body {
+    h2, h3, h4, h5, h6 {
+      &:not(:first-child) {
+        margin-top: 1.5em;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
   &__main {
     --initialMaxHeight: #{rem(741)};
 
@@ -87,16 +99,6 @@
 
     @include mobile {
       --initialMaxHeight: #{rem(669)};
-    }
-
-    h2, h3, h4, h5, h6 {
-      &:not(:first-child) {
-        margin-top: 1.5em;
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 1em;
-      }
     }
   }
 }
