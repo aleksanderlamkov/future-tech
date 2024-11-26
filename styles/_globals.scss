@@ -71,6 +71,10 @@ h6, .h6 {
   @include fluid-text(20, 16);
 }
 
+p {
+  --paragraphMarginBottom: #{rem(24)};
+}
+
 a,
 button,
 label,

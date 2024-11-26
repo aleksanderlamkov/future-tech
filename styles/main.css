@@ -405,6 +405,10 @@ h6, .h6 {
   font-size: clamp(1rem, 0.9362745098rem + 0.2614379085vw, 1.25rem);
 }
 
+p {
+  --paragraphMarginBottom: 1.5rem;
+}
+
 a,
 button,
 label,
@@ -2090,7 +2094,7 @@ button[aria-label]::before {
 }
 @media (width <= 30.06125rem) {
   .news-card__link {
-    min-width: 153px;
+    min-width: 9.5625rem;
   }
 }
 

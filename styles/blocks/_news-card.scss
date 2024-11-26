@@ -74,7 +74,7 @@
 
   &__link {
     @include mobile-s {
-      min-width: 153px;
+      min-width: rem(153);
     }
   }
 }
