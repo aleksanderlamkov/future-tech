@@ -9,7 +9,7 @@
 }
 
 @function fluid($max: 100, $min: 10) {
-  $maxViewportWidth: 1920;
+  $maxViewportWidth: 1600;
   $minViewportWidth: 390;
 
   $maxSize: math.div($max, 16);
