@@ -78,7 +78,7 @@
     right: $right;
     #{$property}: 0;
     translate: $translate;
-    width: 100vw;
+    width: var(--100vw);
     height: rem(1);
     background-color: var(--color-dark-15);
   }

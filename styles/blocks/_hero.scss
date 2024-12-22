@@ -64,7 +64,7 @@
 
     @include tablet {
       &::before {
-        width: 100vw;
+        width: var(--100vw);
         right: calc(var(--container-padding-x) * -1);
       }
     }
@@ -87,7 +87,7 @@
     }
 
     @include tablet {
-      width: 100vw;
+      width: var(--100vw);
       margin-left: calc(var(--container-padding-x) * -1);
       padding: rem(100) rem(40) rem(40);
       background-image: url('../../images/resources-preview/bg_tablet.png');
